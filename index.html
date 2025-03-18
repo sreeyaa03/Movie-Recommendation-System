@@ -5,6 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎬 Movie Recommendation System 🍿</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+        }
+
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            margin-top: 10vh;
+        }
+
+        .movie-card {
+            display: inline-block;
+            margin: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.1);
+        }
+
+        .movie-card img {
+            width: 150px;
+            height: 220px;
+            border-radius: 8px;
+        }
+
+        .loading {
+            font-size: 1.2em;
+            color: yellow;
+        }
+
+        .error {
+            color: red;
+            font-size: 1.2em;
+        }
+
+        .btn-top-right {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <video autoplay muted loop id="bg-video">
@@ -17,6 +85,7 @@
         <input type="text" id="movieInput" placeholder="Enter a movie name...">
         <button onclick="getRecommendations()">🔍 Recommend</button>
         <h3 id="recommendTitle" style="display: none;">Recommended Movies:</h3>
+        <p id="loadingText" class="loading" style="display: none;">Loading recommendations...</p>
         <div id="recommendations"></div>
     </div>
 
@@ -25,23 +94,32 @@
             let movieName = document.getElementById("movieInput").value.trim();
             let recommendationsList = document.getElementById("recommendations");
             let recommendTitle = document.getElementById("recommendTitle");
+            let loadingText = document.getElementById("loadingText");
 
-            recommendationsList.innerHTML = ""; // Clear previous results
+            // Clear previous results
+            recommendationsList.innerHTML = "";
+            recommendTitle.style.display = "none";
+            loadingText.style.display = "block";
 
             if (movieName === "") {
                 alert("Please enter a movie name!");
+                loadingText.style.display = "none";
                 return;
             }
 
+            console.log("Fetching recommendations for:", movieName); // Debugging
+
             fetch(`http://127.0.0.1:5000/recommend?movie=${encodeURIComponent(movieName)}`)
+
                 .then(response => response.json())
                 .then(data => {
                     console.log("API Response:", data);
+                    loadingText.style.display = "none";
 
                     if (data.error) {
                         recommendationsList.innerHTML = `<p class="error">${data.error}</p>`;
-                    } else {
-                        recommendTitle.style.display = "block"; // Show title only when results appear
+                    } else if (data.recommended && data.recommended.length > 0) {
+                        recommendTitle.style.display = "block";
                         data.recommended.forEach(movie => {
                             if (!movie.image) return;
 
@@ -53,9 +131,15 @@
                             `;
                             recommendationsList.appendChild(movieCard);
                         });
+                    } else {
+                        recommendationsList.innerHTML = `<p class="error">No recommendations found.</p>`;
                     }
                 })
-                .catch(error => console.error("Error fetching recommendations:", error));
+                .catch(error => {
+                    console.error("Error fetching recommendations:", error);
+                    loadingText.style.display = "none";
+                    recommendationsList.innerHTML = `<p class="error">Failed to fetch recommendations. Try again later.</p>`;
+                });
         }
     </script>
     <a href="main.html" class="btn-top-right">Home</a>

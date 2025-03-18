@@ -27,27 +27,27 @@ movies = [
   {"title": "La La Land", "genre": "Romance", "image": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
      "similar": [
          {"title": "Titanic", "image": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg"},
-         {"title": "A Star is Born", "image": "https://image.tmdb.org/t/p/w500/7GWjV9e5I38XqIb3dx5CyvXnYdx.jpg"},
-         {"title": "500 Days of Summer", "image": "https://image.tmdb.org/t/p/w500l/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg"}
+         {"title": "A Star is Born", "image": "https://image.tmdb.org/t/p/w500/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg"},
+         {"title": "500 Days of Summer", "image": "https://image.tmdb.org/t/p/w500/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg"}
      ]},
     # Action
      {"title": "Blade Runner 2049", "genre": "Sci-Fi", "image": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
      "similar": [
          {"title": "Dune", "image": "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg"},
          {"title": "Arrival", "image": "https://image.tmdb.org/t/p/w500/x2FJsf1ElAgr63Y3PNPtJrcmpoe.jpg"},
-         {"title": "Ex Machina", "image": "https://image.tmdb.org/t/p/w500/iJQIbOPm81fPEGKt5BPuZmfnA54.jpg"}
+         {"title": "Ex Machina", "image": "https://image.tmdb.org/t/p/w500/dmJW8IAKHKxFNiUnoDR7JfsK7Rp.jpg"}
      ]},
     {"title": "The Dark Knight", "genre": "Action", "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
      "similar": [
-         {"title": "Gladiator", "image": "https://image.tmdb.org/t/p/w500/pRn3TJHbAqCAO6U8Dw5DayVUuO0.jpg"},
+         {"title": "Gladiator", "image": "https://image.tmdb.org/t/p/w500/w0YjBWVfu689txEXZG3xa4Aev3i.jpg"},
          {"title": "Mad Max: Fury Road", "image": "https://image.tmdb.org/t/p/w500/8tZYtuWezp8JbcsvHYO0O46tFbo.jpg"},
-         {"title": "John Wick", "image": "https://image.tmdb.org/t/p/w500/rEJxuttwQ3dM1aapHBvkcmoZyJc.jpg"}
+         {"title": "John Wick", "image": "https://image.tmdb.org/t/p/w500/TxbvYS8wsgYSpYZtQLZXnoVOIQ.jpg"}
      ]},
  {"title": "Die Hard", "genre": "Action", "image": "https://image.tmdb.org/t/p/w500/bxLSU3y1AkIHByk5T7QxpmPDZSq.jpg",
      "similar": [
-         {"title": "Lethal Weapon", "image": "https://image.tmdb.org/t/p/w500/gBqJ5D1N8oZxDpNRJiyGq4U6WKO.jpg"},
-         {"title": "Speed", "image": "https://image.tmdb.org/t/p/w500/rgA4jOe0txSkpbcfrA1F9U5AbIk.jpg"},
-         {"title": "Mission: Impossible", "image": "https://image.tmdb.org/t/p/w500/l5phE2wlnY1Syj0yMLXx2XKcb5P.jpg"}
+         {"title": "Lethal Weapon", "image": "https://image.tmdb.org/t/p/w500/fTq4ThIP3pQTYR9eDepsbDHqdcs.jpg"},
+         {"title": "Speed", "image": "https://image.tmdb.org/t/p/w500/82PkCE4R95KhHICUDF7G4Ly2z3l.jpg"},
+         {"title": "Mission: Impossible", "image": "https://image.tmdb.org/t/p/w500/4AZwDa0RZLIVsOgZxlgOqNUw3U6.jpg"}
      ]},
     # Romance
     {"title": "Titanic", "genre": "Romance", "image": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
@@ -66,9 +66,9 @@ movies = [
      ]},
  {"title": "Hereditary", "genre": "Horror", "image": "https://image.tmdb.org/t/p/w500/lHV8HHlhwNup2VbpiACtlKzaGIQ.jpg",
      "similar": [
-         {"title": "Midsommar", "image": "https://image.tmdb.org/t/p/w500/rXMX4KJJD0z3XJU2f7KjGzggD0r.jpg"},
-         {"title": "The Babadook", "image": "https://image.tmdb.org/t/p/w500/sugXJmMhwIdNCwhR1AsFh9nFikF.jpg"},
-         {"title": "Get Out", "image": "https://image.tmdb.org/t/p/w500/tFXcEccSQMf3lfhfXKSU9iRBpa3.jpg"}
+         {"title": "Midsommar", "image": "https://image.tmdb.org/t/p/w500/eycO6M2s38xO1888Gq2gSrXf0A6.jpg"},
+         {"title": "The Babadook", "image": "https://image.tmdb.org/t/p/w500/qt3fqapeo94TfvMyld8P7gkpXLz.jpg"},
+         {"title": "Get Out", "image": "https://image.tmdb.org/t/p/w500/kFByXOpdP0aZokUPC16c9oWb5uN.jpg"}
      ]},
     # Drama
     {"title": "Forrest Gump", "genre": "Drama", "image": "https://image.tmdb.org/t/p/w500/h5J4W4veyxMXDMjeNxZI46TsHOb.jpg",

@@ -90,11 +90,18 @@ movies = [
          {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/xcUSk3KIflAPCy1Jp64WUfuT8nN.jpg"}
      ]}, 
  # Action & Thriller
-    {"title": "Dumb and Dumber", "genre": "Comedy", "image": "https://image.tmdb.org/t/p/w500/4LdpGMmFspOmTveo6lUe2dHwo1P.jpg",
+    {"title": "The War", "genre": "Spy Thrillerse", "image": "https://image.tmdb.org/t/p/w500/hBW1ZGu72cHOoRSnFrIc2Y9UU7f.jpg",
      "similar": [
-         {"title": "Anchorman", "image": "https://image.tmdb.org/t/p/w500/mhZIcRePT7U8viFQVjt1ZjYIsR4.jpg"},
-         {"title": "Zoolander", "image": "https://image.tmdb.org/t/p/w500/1VRn5gre3doau1YzNLwPRKcjPt2.jpg"},
-         {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/xcUSk3KIflAPCy1Jp64WUfuT8nN.jpg"}
+         {"title": " Pathaan", "image": "https://image.tmdb.org/t/p/w500/fHjQ99tOkR7pQ1jOqecnB9v6rY9.jpg"},
+         {"title": "Tiger Zinda Hai", "image": "https://image.tmdb.org/t/p/w500/l9CoDQIJPA81rwEHyvn3FZ01Rjj.jpg"},
+         {"title": "Ek Tha Tiger", "image": "https://image.tmdb.org/t/p/w500/9qmIOiKLdlIRmdvPV6UmbUx9WFn.jpg"}
+     ]},
+    
+    {"title": "Drishyam", "genre": "Crime & Suspense:", "image": "https://image.tmdb.org/t/p/w500/gIClWRv5OSe8rl5Koi0AeUcCZ9Z.jpg",
+     "similar": [
+         {"title": "Drishyam 2", "image": "https://image.tmdb.org/t/p/w500/pcuGo5KfNkGhftnb1uFEXCN4Gpa.jpg"},
+         {"title": "ugly", "image": "https://image.tmdb.org/t/p/w500/dp2tcwxNbYplCb3seWbU4jcQrbA.jpg"},
+         {"title": "Andhadhun", "image": "https://image.tmdb.org/t/p/w500/66TM84iLYInGYrmOGZ0Fkceis6C.jpg"}
      ]},
 ]
 

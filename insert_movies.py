@@ -79,15 +79,15 @@ movies = [
      ]},
      {"title": "Superbad", "genre": "Comedy", "image": "https://image.tmdb.org/t/p/w500/ek8e8txUyUwdUWDKA5E3vDgfHts.jpg",
      "similar": [
-         {"title": "Pineapple Express", "image": "https://image.tmdb.org/t/p/w500/g0xKypo6hEyG5GUBS3wCD7nRIpZ.jpg"},
-         {"title": "The Hangover", "image": "https://image.tmdb.org/t/p/w500/k7Nl6hoK67z75E95OEiHk4rh2m3.jpg"},
-         {"title": "Step Brothers", "image": "https://image.tmdb.org/t/p/w500/8fWmx5mca8zbbh0iD1L4ucjQZBV.jpg"}
+         {"title": "Pineapple Express", "image": "https://image.tmdb.org/t/p/w500/lj4Dbyc6wZO1a2svrvrPIjCoNFx.jpg"},
+         {"title": "The Hangover", "image": "https://image.tmdb.org/t/p/w500/wTt2BoyAGhr0M00eR1ewVZyQoUq.jpg"},
+         {"title": "Step Brothers", "image": "https://image.tmdb.org/t/p/w500/3PNHisCtgthCGSfiNQ7zN3wHBKa.jpg"}
      ]},
     {"title": "Dumb and Dumber", "genre": "Comedy", "image": "https://image.tmdb.org/t/p/w500/4LdpGMmFspOmTveo6lUe2dHwo1P.jpg",
      "similar": [
-         {"title": "Anchorman", "image": "https://image.tmdb.org/t/p/w500/kZ4vC2vdq0YspFzHDyudlMMiYbb.jpg"},
-         {"title": "Zoolander", "image": "https://image.tmdb.org/t/p/w500/9K6Hr8D6i7XtUdfjocbVG7S3oEb.jpg"},
-         {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/f4ox8bbl6IKGpRieI1l0uPsbmow.jpg"}
+         {"title": "Anchorman", "image": "https://image.tmdb.org/t/p/w500/mhZIcRePT7U8viFQVjt1ZjYIsR4.jpg"},
+         {"title": "Zoolander", "image": "https://image.tmdb.org/t/p/w500/1VRn5gre3doau1YzNLwPRKcjPt2.jpg"},
+         {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/xcUSk3KIflAPCy1Jp64WUfuT8nN.jpg"}
      ]}
 ]
 

@@ -88,7 +88,14 @@ movies = [
          {"title": "Anchorman", "image": "https://image.tmdb.org/t/p/w500/mhZIcRePT7U8viFQVjt1ZjYIsR4.jpg"},
          {"title": "Zoolander", "image": "https://image.tmdb.org/t/p/w500/1VRn5gre3doau1YzNLwPRKcjPt2.jpg"},
          {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/xcUSk3KIflAPCy1Jp64WUfuT8nN.jpg"}
-     ]}
+     ]}, 
+ # Action & Thriller
+    {"title": "Dumb and Dumber", "genre": "Comedy", "image": "https://image.tmdb.org/t/p/w500/4LdpGMmFspOmTveo6lUe2dHwo1P.jpg",
+     "similar": [
+         {"title": "Anchorman", "image": "https://image.tmdb.org/t/p/w500/mhZIcRePT7U8viFQVjt1ZjYIsR4.jpg"},
+         {"title": "Zoolander", "image": "https://image.tmdb.org/t/p/w500/1VRn5gre3doau1YzNLwPRKcjPt2.jpg"},
+         {"title": "The Mask", "image": "https://image.tmdb.org/t/p/w500/xcUSk3KIflAPCy1Jp64WUfuT8nN.jpg"}
+     ]},
 ]
 
 # Insert movies into MongoDB

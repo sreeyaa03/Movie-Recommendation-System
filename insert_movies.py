@@ -30,6 +30,24 @@ movies = [
          {"title": "A Star is Born", "image": "https://image.tmdb.org/t/p/w500/wrFpXMNBRj2PBiN4Z5kix51XaIZ.jpg"},
          {"title": "500 Days of Summer", "image": "https://image.tmdb.org/t/p/w500/qXAuQ9hF30sQRsXf40OfRVl0MJZ.jpg"}
      ]},
+     {"title": "Kabir Singh", "genre": "Romance & drama", "image":"https://image.tmdb.org/t/p/w500/g0bIMJRQyibCEaGy8V48VviFVKM.jpg",
+     "similar": [
+         {"title": "Arjun Reddy", "image": "https://image.tmdb.org/t/p/w500/u9yryEQRGJYobvtneoyeIEhuCUj.jpg"},
+         {"title": "Sandeep Aur Pinky Faraar", "image": "https://image.tmdb.org/t/p/w500/kxKqf6U7fmVwtFzzvDBVItS0yAS.jpg"},
+         {"title": "Raanjhanaa", "image": "https://image.tmdb.org/t/p/w500/zY9YEinXLikdxbtBZddsHGT89Bl.jpg"}
+     ]},
+      {"title": "Ae Dil Hai Mushkil", "genre": "Romance & drama", "image": "https://image.tmdb.org/t/p/w500/hlDOF4UhUqrYY7gqLk3Rl0Fx4ns.jpg",
+     "similar": [
+         {"title": "Tamasha", "image": "https://image.tmdb.org/t/p/w500/8Ktf15qGVFYQ6CdBtBgCDM96UMC.jpg"},
+         {"title": "Rockstar", "image": "https://image.tmdb.org/t/p/w500/2LR5ManbBWmotbM0lYCJ1TVko9P.jpg"},
+         {"title": "Lootera", "image": "https://image.tmdb.org/t/p/w500/6Yd8RbKoiD4e6AK5Dcn65Od2fe2.jpg"}
+     ]},
+      {"title": "Yeh Jawaani Hai Deewani", "genre": "Romance & drama", "image": "https://image.tmdb.org/t/p/w500/cNkiZqlH5TsIC16tyzyShBjbcE5.jpg",
+     "similar": [
+         {"title": "Zindagi Na Milegi Dobara", "image": "https://image.tmdb.org/t/p/w500/hKO9O715wYxjkQSEv47giCYcyO8.jpg"},
+         {"title": "Dil Chahta Hai", "image": "https://image.tmdb.org/t/p/w500/d5yjk7hbv8AK0DR0oJUrSGHMn9A.jpg"},
+         {"title": "Wake Up Sid", "image": "https://image.tmdb.org/t/p/w500/1UpgW67W6Do0xizTuE26bMQFLdL.jpg"}
+     ]},
     # Action
      {"title": "Blade Runner 2049", "genre": "Sci-Fi", "image": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
      "similar": [

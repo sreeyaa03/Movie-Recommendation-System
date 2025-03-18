@@ -1,80 +1,118 @@
-/* Background Image & Styling */
+/* Full-screen dynamic gradient background */
 body {
-    font-family: Arial, sans-serif;
-    background: url('https://source.unsplash.com/1600x900/?movies,cinema') no-repeat center center/cover;
-    text-align: center;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(-45deg, #14205e, #1f2684, #112554, #85b9fd);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Container */
-.container {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
-    width: 60%;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+/* Animated background */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-/* Input & Button */
+/* Content container - ensures everything is centered */
+.content {
+    width: 90%;
+    max-width: 800px;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-10%);
+}
+
+/* Input field styling */
 input {
     width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 25px;
     border: none;
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Recommend button styling */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background: #ff4500;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #ff4b5c;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    transition: 0.3s ease;
 }
 
 button:hover {
-    background: #ff6347;
+    background: #ff1e3c;
+    transform: scale(1.05);
 }
 
-/* Movie List with Images */
+/* Recommended Movies container */
 #recommendations {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
+/* Movie Cards */
 .movie-card {
     background: rgba(255, 255, 255, 0.2);
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
     width: 200px;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
 }
 
 .movie-card img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .movie-card p {
     font-size: 16px;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 /* Error Message */
 .error {
-    color: red;
+    color: yellow;
     font-weight: bold;
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+    }
+
+    .movie-card {
+        width: 160px;
+    }
 }

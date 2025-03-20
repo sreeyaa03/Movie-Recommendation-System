@@ -30,6 +30,9 @@ body {
     background-attachment: fixed, fixed;
 
 }
+ .container{
+    text-align: center;
+ }
 
 /* Animated background */
 @keyframes gradient {

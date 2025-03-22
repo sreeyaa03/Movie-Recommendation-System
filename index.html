@@ -95,39 +95,41 @@
             let recommendationsList = document.getElementById("recommendations");
             let recommendTitle = document.getElementById("recommendTitle");
             let loadingText = document.getElementById("loadingText");
-
+    
             // Clear previous results
             recommendationsList.innerHTML = "";
             recommendTitle.style.display = "none";
             loadingText.style.display = "block";
-
+    
             if (movieName === "") {
                 alert("Please enter a movie name!");
                 loadingText.style.display = "none";
                 return;
             }
-
+    
             console.log("Fetching recommendations for:", movieName); // Debugging
-
+    
             fetch(`http://127.0.0.1:5000/recommend?movie=${encodeURIComponent(movieName)}`)
-
                 .then(response => response.json())
                 .then(data => {
                     console.log("API Response:", data);
                     loadingText.style.display = "none";
-
+    
                     if (data.error) {
                         recommendationsList.innerHTML = `<p class="error">${data.error}</p>`;
                     } else if (data.recommended && data.recommended.length > 0) {
                         recommendTitle.style.display = "block";
                         data.recommended.forEach(movie => {
-                            if (!movie.image) return;
-
+                            console.log("Movie Data:", movie); 
+                            if (!movie.image || !movie.movie_id) return;
+    
                             let movieCard = document.createElement("div");
                             movieCard.classList.add("movie-card");
                             movieCard.innerHTML = `
-                                <img src="${movie.image}" alt="${movie.title}">
-                                <p>${movie.title}</p>
+                                 <a href="movie.html?movie_id=${encodeURIComponent(movie.movie_id) }">
+                                    <img src="${movie.image}" alt="${movie.title}">
+                                    <p>${movie.title}</p>
+                                </a>
                             `;
                             recommendationsList.appendChild(movieCard);
                         });
@@ -142,6 +144,7 @@
                 });
         }
     </script>
+    
     <a href="main.html" class="btn-top-right">Home</a>
 </body>
 </html>

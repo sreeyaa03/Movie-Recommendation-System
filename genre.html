@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies in Genre</title>
+    <link rel="stylesheet" href="styles_genre.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="dropbtn">Genres ⏷</button>
+                <div class="dropdown-content">
+                    <a href="genre.html?genre=All">All</a>
+                    <a href="genre.html?genre=Sci-Fi">Sci-Fi</a>
+                    <a href="genre.html?genre=Romance">Romance</a>
+                    <a href="genre.html?genre=Action">Action</a>
+                    <a href="genre.html?genre=Horror">Horror</a>
+                    <a href="genre.html?genre=Drama">Drama</a>
+                    <a href="genre.html?genre=Romance%20%26%20Drama">Romance & Drama</a>
+
+                </div>
+            </div>
+        </div>
+        <a href="index.html" class="btn-home">Home</a>
+    </nav>
+    <h1 id="genre-title" class="genre-title">Movies in Romance</h1>
+    <div id="movies-container"></div>
+
+    <script>
+        let params = new URLSearchParams(window.location.search);
+        let genre = params.get("genre") || "All";
+        document.getElementById("genre-title").textContent = `Movies in ${genre}`;
+
+        fetch(`http://127.0.0.1:5000/movies?genre=${encodeURIComponent(genre)}`)
+            .then(response => response.json())
+            .then(data => {
+                let container = document.getElementById("movies-container");
+                container.innerHTML = "";
+
+                if (data.error) {
+                    container.innerHTML = `<p class="error">${data.error}</p>`;
+                } else {
+                    data.movies.forEach(movie => {
+                        let movieCard = document.createElement("div");
+                        movieCard.classList.add("movie-card");
+                        movieCard.innerHTML = `
+                            <a href="movie.html?movie_id=${movie.movie_id}">
+                                <img src="${movie.image}" alt="${movie.title}">
+                                <p>${movie.title}</p>
+                            </a>
+                        `;
+                        container.appendChild(movieCard);
+                    });
+                }
+            })
+            .catch(error => {
+                document.getElementById("movies-container").innerHTML = `<p class="error">Failed to load movies.</p>`;
+                console.error("Fetch error:", error);
+            });
+    </script>
+</body>
+</html>

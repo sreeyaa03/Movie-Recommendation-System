@@ -72,6 +72,80 @@
             color: white;
             font-weight: bold;
         }
+        nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Ensures navbar stays on top */
+    backdrop-filter: blur(10px);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.btn-home {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 20px;
+    height: 20px;
+}
+.btn-home:hover {
+    background: rgba(147, 28, 4, 0.879);   
+}
+
+
+
+     
+
     </style>
 </head>
 <body>
@@ -79,7 +153,24 @@
         <source src="bg-video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    
+    <nav>
+        <div class="nav-left">
+            <div class="dropdown">
+                <button class="dropbtn">Genres ⏷</button>
+                <div class="dropdown-content">
+                    <a href="genre.html?genre=All">All</a>
+                    <a href="genre.html?genre=Sci-Fi">Sci-Fi</a>
+                    <a href="genre.html?genre=Romance">Romance</a>
+                    <a href="genre.html?genre=Action">Action</a>
+                    <a href="genre.html?genre=Horror">Horror</a>
+                    <a href="genre.html?genre=Drama">Drama</a>
+                    <a href="genre.html?genre=Romance%20%26%20Drama">Romance & Drama</a>
+
+                </div>
+            </div>
+        </div>
+        <a href="main.html" class="btn-home">Home</a>
+    </nav>
     <div class="content">
         <h1>🎥 Movie Recommendation System</h1>
         <input type="text" id="movieInput" placeholder="Enter a movie name...">
@@ -145,6 +236,5 @@
         }
     </script>
     
-    <a href="main.html" class="btn-top-right">Home</a>
 </body>
 </html>

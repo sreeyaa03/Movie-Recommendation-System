@@ -15,7 +15,7 @@ movies = [
  "rating":"7.5/10","similar_ids": [2, 3, 4]},
 
     {"movie_id": 2, "title": "Interstellar", "genre": "Sci-Fi", "image": "https://image.tmdb.org/t/p/w500/nCbkOyOMTEwlEV0LtCOvCnwEONA.jpg",
-     "description": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.", "director":"Christopher Nolan",  # Add comma here
+     "description": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage. ", "director":"Christopher Nolan",  # Add comma here
      "rating":"8.6/10",  # Add comma here
      "similar_ids": [1, 3, 4]},
     {"movie_id": 3, "title": "The Matrix", "genre": "Sci-Fi", "image": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
@@ -58,7 +58,7 @@ movies = [
         "description": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.", "director":"Chad Stahelski",  # Add comma here
      "rating":"7.4/10",  # Add comma here
      "similar_ids": [9, 10, 11]},
-    {"movie_id": 13, "title": "The Conjuring", "genre": "Horror", "image": "https://image.tmdb.org/t/p/w500/3cbmY8ooSkWgF1kudL2WBnFZn2T.jpg",
+    {"movie_id": 13, "title": "The Conjuring", "genre": "Horror", "image": "https://image.tmdb.org/t/p/w500/wVYREutTvI2tmxr6ujrHT704wGF.jpg",
      "description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.", "director":"James Wan",  # Add comma here
     "rating":"7.5/10",  # Add comma here
      "similar_ids": [14, 15, 16]},
@@ -121,7 +121,8 @@ movies = [
     {"movie_id":28,"title": "Dil Chahta Hai", "genre": "Romance & drama", "image":"https://image.tmdb.org/t/p/w500/d5yjk7hbv8AK0DR0oJUrSGHMn9A.jpg",
      "description": "Three inseparable childhood friends are just out of college. Nothing comes between them - until they each fall in love, and their wildly different approaches to relationships creates tension.", "director":"Farhan Akhtar",  # Add comma here
         "rating":"8.1/10",  # Add comma here
-        "similar_ids": [25, 26, 27]}
+        "similar_ids": [25, 26, 27]},
+        
 
 ]
 

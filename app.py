@@ -69,6 +69,32 @@ def get_movie():
     print(f"✅ Movie found: {movie}")  # Debugging log
 
     return jsonify(movie)
+@app.route("/movies", methods=["GET"])
+def get_movies_by_genre():
+    """ Fetch movies based on the selected genre. """
+    genre = request.args.get("genre", "").strip()
+
+    if not genre:
+        return jsonify({"error": "Genre not specified"}), 400
+
+    print(f"🎬 Fetching movies for genre: {genre}")  # Debugging log
+
+    query = {} if genre.lower() == "all" else {"genre": {"$regex": f"^{genre}$", "$options": "i"}}
+    
+    movies = list(
+        movies_collection.find(query, {"_id": 0, "title": 1, "image": 1, "movie_id": 1})
+    )
+
+    if not movies:
+        print(f"❌ No movies found for genre: {genre}")
+        return jsonify({"error": "No movies found"}), 404
+
+    print(f"✅ Movies found: {movies}")  # Debugging log
+
+    return jsonify({"movies": movies})
+
+
+ 
 
 
 
